@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;700&family=Press+Start+2P&display=swap');
+
+:root {
+    --menu-color:#272741;
+    --hover-color:#4a4a7c;
+    --background-menu-color:#f5f8fc;
+    --buttom-color:#f7c073;
+    --background-color: #e2e4ea;
+    --text-color:#a3a3a5;
+    --exit-color:rgb(255, 43, 43);
+}
+
+* {
+    border:0;
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25rem 1fr 35rem;
+}
+
+/* COMPLETO NÃO MEXER */
+
+aside {
+    background-color: var(--menu-color);
+}
+
+main {
+    background-color: var(--background-color);
+}
+
+main .main {
+    background-color: var(--background-menu-color);
+    border-radius: .5rem;
+    margin-top: .5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+    height: 64.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .main .general {
+    padding-top: 1rem;
+    margin-left: 3rem;
+}
+
+main .main .register .register-1 {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    width: 61.5rem;
+    display: flex;
+    justify-content: center;
+}
+main .main .register .register-1 .info input {
+    border:.2rem solid var(--menu-color);
+    border-radius: .5rem;
+    outline:none;
+    padding-left: 1rem;
+    height: 8rem;
+}
+main .main .register .register-1 .info {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 5.3rem;
+    justify-content: space-between;
+}
+
+main .main .buttom{
+    display: flex;
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
+main .main .buttom button{
+    background-color: var(--menu-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 3rem;
+    border-radius: .3rem;
+    color: var(--background-color);
+}
+
+main .table {
+    margin-top: 5rem;
+    width:50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .table td,th {
+    border: .1rem solid black;
+    padding: 1rem;
+}
+main .table table button {
+    width: 8rem;
+    background-color: var(--exit-color);
+    border-radius: .2rem;
+    color: var(--background-color);
+
+}
