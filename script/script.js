@@ -30,21 +30,28 @@ function setLocalStorage (con_banco) {
 //mexendo com a tabela
 function updateTable() {
     const con_banco = getLocalStorage()
-
     con_banco.forEach(newRow)
 
 }
 
-function newRow(contact, index){
+function newRow(contato, site){
     const line = document.createElement('tr')
     line.innerHTML =    `
-                        <td>${index}</td>
-                        <td>${contact.name}</td>
-                        <td>${contact.fone}</td>
-                        <td><button>Deletar</button></td>
+                        <td>${site}</td>
+                        <td>${contato.name}</td>
+                        <td>${contato.fone}</td>
+                        <td><button data-site="${site}"onclick='limpa(this)'>Deletar</button></td>
                         `
     document.querySelector('#tbContacts>tbody').appendChild(line)
 }
 
+function limpa(button) {
+    const con_banco = getLocalStorage()
+    const site = button.getAttribute('data-site')
+    con_banco.splice(site, 1)//vai remover a formula do array
+    setLocalStorage(con_banco)
+    updateTable()
+    
+}
 updateTable()
 
